@@ -1,0 +1,12 @@
+version: '2'
+services:
+  samba:
+    build: .
+    ports:
+      - 138:138/udp
+      - 139:139
+      - 445:445
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./samba:/samba
